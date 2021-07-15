@@ -1,0 +1,37 @@
+<h1><a href="/" > BLOG</a>
+</h1>
+<div class="register">
+  <%- include ('partials/messages') %>
+    <form action="/users/register" method="POST">
+      <div class="logincontainer">
+        <h2> Register </h2>
+        <p>Please fill in this form to create an account.</p>
+          <hr>
+       <label for="name"><b>Name</b></label>
+        <input type="text" id="name" name="name" required
+          value="<%= typeof name != 'undefined' ? name : '' %>" />
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" id="email" name="email" required
+          value="<%= typeof email != 'undefined' ? email : '' %>" />
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" id="password" name="password" required
+          value="<%= typeof password != 'undefined' ? password : '' %>" />
+
+        <label for="password2"><b>Confirm Password</b></label>
+        <input type="password" id="password2" name="password2" required
+          value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+
+          <hr>
+        <button type="submit" class="registerbtn">
+          Register
+        </button>
+        <a href="/" class="redirect">Cancel</a>
+      </div>
+        <div class="container signin">
+          <p>Have an account?<a href="/users/login" class="redirect">Sign in</a></p>
+        </div>
+    </form>
+
+  </div>
